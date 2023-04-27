@@ -1,0 +1,27 @@
+version: '3.4'
+
+networks:
+  appnetwork:
+
+services:
+  membersdb:
+    container_name: membersdb
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+    ports:
+       - "27017:27017"
+    networks:
+       - appnetwork
+
+  members.api:
+    container_name: members-api
+    image: ${DOCKER_REGISTRY-}membersapi
+    build:
+      context: .
+      dockerfile: Members.Api/Dockerfile
+    depends_on:
+       - membersdb
+    networks:
+       - appnetwork
