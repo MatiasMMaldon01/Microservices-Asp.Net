@@ -2,7 +2,9 @@ using Members.Domain.Interfaces;
 using Members.Infraestrucutre.Data;
 using Members.Infraestrucutre.Repository;
 using Members.IServicio.Members;
+using Members.IServicio.User;
 using Members.Service.MemberService;
+using Members.Service.UserService;
 using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +22,8 @@ builder.Services.AddSingleton<IDBSettings>(serviceProvider =>
     serviceProvider.GetRequiredService<IOptions<DBSettings>>().Value);
 
 builder.Services.AddScoped<IMemberService, MemberService>();
+builder.Services.AddScoped<IUserService, UserService>();
+
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 var app = builder.Build();

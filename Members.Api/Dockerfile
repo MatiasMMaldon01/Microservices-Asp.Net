@@ -11,6 +11,7 @@ COPY ["Members.Api/Members.Api.csproj", "Members.Api/"]
 COPY ["Members.Infraestrucutre/Members.Infraestrucutre.csproj", "Members.Infraestrucutre/"]
 COPY ["Members.Domain/Members.Domain.csproj", "Members.Domain/"]
 COPY ["Members.Service/Members.Service.csproj", "Members.Service/"]
+COPY ["Common/Common.csproj", "Common/"]
 COPY ["Members.IServicio/Members.IServicio.csproj", "Members.IServicio/"]
 RUN dotnet restore "Members.Api/Members.Api.csproj"
 COPY . .

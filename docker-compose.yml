@@ -4,6 +4,27 @@ networks:
   appnetwork:
 
 services:
+  rutinedb:
+    container_name: rutinedb
+    image: mysql
+    environment:
+       MYSQL_ROOT_PASSWORD: pass1234
+    ports:
+       - 3306:3306
+    networks:
+       - appnetwork
+
+  rutine.api:
+    container_name: rutine-api
+    image: ${DOCKER_REGISTRY-}rutineapi
+    build:
+      context: .
+      dockerfile: Rutine.Api/Dockerfile
+    depends_on:
+       - rutinedb
+    networks:
+       - appnetwork
+
   membersdb:
     container_name: membersdb
     image: mongo
@@ -11,7 +32,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: password
     ports:
-       - "27017:27017"
+       - 27017:27017
     networks:
        - appnetwork
 
@@ -20,8 +41,11 @@ services:
     image: ${DOCKER_REGISTRY-}membersapi
     build:
       context: .
-      dockerfile: Members.Api/Dockerfile
+      dockerfile: Members.Api/Dockerfile 
     depends_on:
        - membersdb
     networks:
        - appnetwork
+
+  
+

@@ -27,7 +27,6 @@ namespace Members.Service.MemberService
                 Name = dto.Name,
                 Surname = dto.Surname,
                 Email = dto.Email,
-                IsDeleted = false,
             };
 
             _repository.Create(newMember);
@@ -44,7 +43,6 @@ namespace Members.Service.MemberService
                 Name = dto.Name,
                 Surname = dto.Surname,
                 Email = dto.Email,
-                IsDeleted = false,
             };
 
             _repository.Update(newMember);
@@ -66,7 +64,6 @@ namespace Members.Service.MemberService
                 Email = member.Email,
                 Surname = member.Surname,
                 CreatedAt = member.CreatedAt,
-                IsDeleted = member.IsDeleted,
             };
         }
 
