@@ -11,10 +11,6 @@ namespace Members.Domain.Entities
         [BsonRepresentation(BsonType.ObjectId)]
         public ObjectId Id { get; set; }
 
-        [BsonElement("isDeleted")]
-        [BsonRepresentation(BsonType.Boolean)]
-        public bool IsDeleted { get; set; }
-
         [BsonElement("createdat")]
         [BsonRepresentation(BsonType.DateTime)]
         public DateTime CreatedAt => Id.CreationTime;

@@ -50,10 +50,8 @@ namespace Members.Infraestrucutre.Repository
         }
 
         public IEnumerable<T> GetAll()
-        {
-            Expression<Func<T, bool>> filter = t => t.IsDeleted == false;
-            
-            return _collection.Find(filter).ToEnumerable();
+        {        
+            return _collection.Find(x => true).ToEnumerable();
         }
 
         public IEnumerable<T> GetByFilter(Expression<Func<T, bool>> filter = null)
