@@ -19,6 +19,7 @@
     <ProjectReference Include="..\Payment.Infraestructure\Payment.Infraestructure.csproj" />
     <ProjectReference Include="..\Payment.IService\Payment.IService.csproj" />
     <ProjectReference Include="..\Payment.Service\Payment.Service.csproj" />
+    <ProjectReference Include="..\Rutine.Domain\Rutine.Domain.csproj" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
