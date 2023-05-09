@@ -19,6 +19,6 @@ namespace Rutine.Domain.Metadata
         int Reps { get; set; }
 
         [Required(ErrorMessage = "Required field")]
-        int Weight { get; set; }
+        decimal Weight { get; set; }
     }
 }

@@ -55,6 +55,8 @@ services:
     ports:
        - "1521:1521"
        - "5500:5500"
+    networks:
+       - appnetwork
 
   
   payment.api:
@@ -67,3 +69,13 @@ services:
        - paymentdb  
     networks:
        - appnetwork
+
+  apigateway:
+    container_name: gateway-api
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: ApiGateway/Dockerfile
+    networks:
+       - appnetwork
+
