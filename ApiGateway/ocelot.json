@@ -1,0 +1,275 @@
+{
+  "Routes": [
+    {
+      // Member API
+      // Member
+      "UpstreamPathTemplate": "/api/Member",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "members.api",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Member",
+      "DangerousAcceptAnyServerCertificateValidator": true
+    },
+    {
+      "UpstreamPathTemplate": "/api/Member/{id}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "members.api",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Member/{id}",
+      "DangerousAcceptAnyServerCertificateValidator": true
+    },
+    {
+      "UpstreamPathTemplate": "/api/Member/GetAll",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "members.api",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Member/GetAll",
+      "DangerousAcceptAnyServerCertificateValidator": true
+    },
+    {
+      // User
+      "UpstreamPathTemplate": "/api/User",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "members.api",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/User",
+      "DangerousAcceptAnyServerCertificateValidator": true
+    },
+    {
+      "UpstreamPathTemplate": "/api/User/{id}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "members.api",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/User/{id}",
+      "DangerousAcceptAnyServerCertificateValidator": true
+    },
+    {
+      "UpstreamPathTemplate": "/api/User/GetAll",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "members.api",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/User/GetAll",
+      "DangerousAcceptAnyServerCertificateValidator": true
+    },
+    {
+      // Routine Api
+      // Routine
+      "UpstreamPathTemplate": "/api/Rutine",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "rutine.api",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Rutine",
+      "DangerousAcceptAnyServerCertificateValidator": true
+    },
+    {
+      "UpstreamPathTemplate": "/api/Rutine/{id}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "rutine.api",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Rutine/{id}",
+      "DangerousAcceptAnyServerCertificateValidator": true
+    },
+    {
+      "UpstreamPathTemplate": "/api/Rutine/GetAll",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "rutine.api",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Rutine/GetAll",
+      "DangerousAcceptAnyServerCertificateValidator": true
+    },
+    {
+      // Exercise
+      "UpstreamPathTemplate": "/api/Exercise",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "rutine.api",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Exercise",
+      "DangerousAcceptAnyServerCertificateValidator": true
+    },
+    {
+      "UpstreamPathTemplate": "/api/Exercise/{id}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "rutine.api",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Exercise/{id}",
+      "DangerousAcceptAnyServerCertificateValidator": true
+    },
+    {
+      "UpstreamPathTemplate": "/api/Exercise/GetAll",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "rutine.api",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Exercise/GetAll",
+      "DangerousAcceptAnyServerCertificateValidator": true
+    },
+    {
+      // Payment API
+      // Payment
+
+      "UpstreamPathTemplate": "/api/Payment",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "payment.api",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Payment",
+      "DangerousAcceptAnyServerCertificateValidator": true
+    },
+    {
+      "UpstreamPathTemplate": "/api/Payment/{id}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "payment.api",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Payment/{id}",
+      "DangerousAcceptAnyServerCertificateValidator": true
+    },
+    {
+      "UpstreamPathTemplate": "/api/Payment/GetAll",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "payment.api",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Payment/GetAll",
+      "DangerousAcceptAnyServerCertificateValidator": true
+    },
+    {
+      // PriceList
+
+      "UpstreamPathTemplate": "/api/PriceList",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "payment.api",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/PriceList",
+      "DangerousAcceptAnyServerCertificateValidator": true
+    },
+    {
+      "UpstreamPathTemplate": "/api/PriceList/{id}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "payment.api",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/PriceList/{id}",
+      "DangerousAcceptAnyServerCertificateValidator": true
+    },
+    {
+      "UpstreamPathTemplate": "/api/PriceList/GetAll",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "payment.api",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/PriceList/GetAll",
+      "DangerousAcceptAnyServerCertificateValidator": true
+    },
+    {
+      "UpstreamPathTemplate": "/api/PriceList/GetCurrentPriceList",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "payment.api",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/PriceList/GetCurrentPriceList",
+      "DangerousAcceptAnyServerCertificateValidator": true
+    }
+  ]
+}

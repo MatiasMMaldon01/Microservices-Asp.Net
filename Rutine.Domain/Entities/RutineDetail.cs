@@ -18,7 +18,7 @@ namespace Rutine.Domain.Entities
 
         public int Reps { get; set; }
 
-        public int Weight { get; set; }
+        public decimal Weight { get; set; }
 
 
         public virtual Rutine Rutine { get; set; }

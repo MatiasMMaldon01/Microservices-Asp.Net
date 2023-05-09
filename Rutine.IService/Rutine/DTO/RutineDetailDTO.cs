@@ -16,6 +16,6 @@ namespace Rutine.IService.Rutine.DTO
 
         public int Reps { get; set; }
 
-        public int Weight { get; set; }
+        public decimal Weight { get; set; }
     }
 }
